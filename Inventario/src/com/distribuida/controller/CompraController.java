@@ -1,8 +1,5 @@
 package com.distribuida.controller;
 
-import java.util.Date;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Controller;
@@ -13,18 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.distribuida.dao.CompraDAO;
-import com.distribuida.entities.Compra;
 
-
-
-@Controller
-@RequestMapping("/Compras") //Path principal
 public class CompraController {
 
-	@Autowired
 	private CompraDAO CompraDAO;
 	
-	@GetMapping("/findAll")
 	public String findAll(Model model) {
 		/*try {
 			List<Compra> Compras=CompraDAO.findALL();
@@ -38,7 +28,6 @@ public class CompraController {
 		return "listar-Compras";
 	}
 	
-	@GetMapping("/findOne")
 	public String findOne(@RequestParam("idCompra")@Nullable Integer idCompra
 						  ,@RequestParam("opcion") @Nullable Integer opcion
 						  ,Model model
@@ -61,7 +50,6 @@ public class CompraController {
 		else return "del-Compras";
 	}
 	
-	@PostMapping("/add")
 	public String add(@RequestParam ("idCompra") @Nullable Integer idCompra
 					 ,@RequestParam ("fechaCompra") @Nullable Date fechaCompra
 					 ,@RequestParam ("idProveedor") @Nullable Integer idProveedor
@@ -94,7 +82,6 @@ public class CompraController {
 		return "redirect:/Compras/findAll";
 	}
 	
-	@GetMapping("/dell")
 	public String dell(@RequestParam  ("idCompra") @Nullable Integer idCompra) {
 		/*try {
 			CompraDAO.dell(idCompra);
