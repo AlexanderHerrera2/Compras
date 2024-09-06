@@ -55,7 +55,7 @@
 
             <div class="form-group">
                 <label for="precioUnitario" class="form-label">Precio Unitario</label>
-                <input type="number" class="form-control" id="precioUnitario" name="precioUnitario" value="${detallesCompra.precioUnitario}" required>
+                <input type="number" step="any" class="form-control" id="precioUnitario" name="precioUnitario" value="${detallesCompra.precioUnitario}" required>
             </div>
 
             <div class="btn-group">

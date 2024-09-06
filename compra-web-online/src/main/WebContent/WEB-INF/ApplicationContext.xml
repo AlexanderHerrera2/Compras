@@ -29,7 +29,7 @@
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 	
-
+	
 
     <!-- Origen BBDD y connection pool -->
 	<bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"

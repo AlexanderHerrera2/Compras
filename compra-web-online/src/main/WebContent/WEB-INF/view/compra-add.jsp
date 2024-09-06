@@ -45,7 +45,7 @@
                 
                 <div class="form-group">
                     <label for="total" class="form-label">Total</label>
-                    <input class="form-control" type="text" id="total" name="total" value="${Compra.total}" required>
+                    <input class="form-control" step="any" type="text" id="total" name="total" value="${Compra.total}" required>
                 </div>
                 <br>
                 <button class="btn btn-success" type="submit">Guardar</button>    
